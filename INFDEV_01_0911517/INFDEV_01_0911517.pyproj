@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>635392b9-2220-49ce-acbb-1229773168c2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>assignment1.py</StartupFile>
+    <StartupFile>triangle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="assignment1.py" />
+    <Compile Include="triangle.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
