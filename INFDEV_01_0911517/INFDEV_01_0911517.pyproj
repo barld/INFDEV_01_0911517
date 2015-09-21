@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>635392b9-2220-49ce-acbb-1229773168c2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>squire.py</StartupFile>
+    <StartupFile>circle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="assignment1.py" />
+    <Compile Include="circle.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="squire.py">
       <SubType>Code</SubType>
     </Compile>
