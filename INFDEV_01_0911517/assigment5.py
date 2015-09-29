@@ -31,3 +31,17 @@ def ex2():
     else:
         print "your password is strong"
 
+
+def ex3():
+    sInput = raw_input("put in a string: ")
+    iInput = int(raw_input("input an int: "))
+
+    def shiftChar(char):
+        offset = 97 if str.islower(char) else 65
+        num = (ord(char) - offset + iInput + 26) % 26
+        return chr(num+offset)
+
+    def mapString(m, sInput):
+        return "".join(map(m, sInput))
+
+    print mapString(shiftChar, sInput)
