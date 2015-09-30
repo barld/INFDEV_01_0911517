@@ -14,6 +14,31 @@ def printSquare(height, width, full = False):
 printSquare(4,5,True)
 printSquare(9,8,False)
 
+def printRectangleTriangle(size):
+    rectangle = ""
+    for i in range(size+1):
+        for j in range(i):
+            rectangle += "*"
+        rectangle += "\n"
+    print rectangle
+
+printRectangleTriangle(5)
+
+def printIsoscelesTriangle(size):
+    traingle = ""
+    for i in range(size):
+        for j in range(size*2-1):
+            if size-2-i < j and (size-2-i)+((i+1)*2) > j:
+                traingle += "*"
+            else:
+                traingle += " "
+
+        traingle += "\n"
+    print traingle
+
+printIsoscelesTriangle(3)
+
+
 import math
 
 def printCircle(r):
@@ -23,7 +48,7 @@ def printCircle(r):
             if math.sqrt((x-r)**2 + (y-r)**2) < r:
                 circle += "*"
             else:
-                circle += " "
+                circle += "-"
         circle += "\n"
 
     print circle
