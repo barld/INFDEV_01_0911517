@@ -36,12 +36,11 @@ def ex3():
     sInput = raw_input("put in a string: ")
     iInput = int(raw_input("input an int: "))
 
-    def shiftChar(char):
+    nString = ""
+
+    for char in sInput:
         offset = 97 if str.islower(char) else 65
         num = (ord(char) - offset + iInput + 26) % 26
-        return chr(num+offset)
+        nString += chr(num+offset)
 
-    def mapString(m, sInput):
-        return "".join(map(m, sInput))
-
-    print mapString(shiftChar, sInput)
+    print rtw
