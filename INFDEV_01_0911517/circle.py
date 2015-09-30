@@ -1,4 +1,4 @@
-import math
+﻿import math
 
 r=60
 coordinates = [(int(r*math.cos(i)), int(r*math.sin(i))) for i in range(0,361,1)]

@@ -13,3 +13,49 @@ def printSquare(height, width, full = False):
 
 printSquare(4,5,True)
 printSquare(9,8,False)
+
+import math
+
+def printCircle(r):
+    circle = ""
+    for x in range(0,r*2+1):
+        for y in range(0,r*2+1):
+            if math.sqrt((x-r)**2 + (y-r)**2) < r:
+                circle += "*"
+            else:
+                circle += " "
+        circle += "\n"
+
+    print circle
+
+def printSmiley(r):
+    circle = ""
+    for x in range(0,r*2+1):
+        for y in range(0,r*2+1):
+            if math.sqrt((x-r)**2 + (y-r)**2) < r:
+                #eyes
+                if (x == r/2 and y == r/2) or (x == r/2 and y == r + r/2):
+                    circle += "O"
+                #eyebrowes
+                elif (x == r/2-1 and y == r/2) or (x == r/2-1 and y == r + r/2):
+                    circle += "-"
+                #mond
+                elif x == r + r/2 and math.sqrt((x-r)**2 + (y-r)**2) < (r-2):
+                    circle += "-"
+                #nose
+                elif x == r + r/4 and y == r:
+                    circle += "#"
+                elif math.sqrt((x-r)**2 + (y-r)**2) > r-1:
+                    circle += "*"
+                else:
+                    circle += " "
+            else:
+                circle += " "
+        circle += "\n"
+
+    print circle
+
+printCircle(15)
+
+printSmiley(15)
+printSmiley(10)
