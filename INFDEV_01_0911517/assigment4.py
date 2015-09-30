@@ -1,4 +1,4 @@
-
+﻿
 def ex1a():
     fahrenheit = raw_input("input degrees fahrenheit you want to convert to celcius: ")
     fahrenheit = float(fahrenheit)
@@ -23,14 +23,18 @@ def ex1c():
 
 def ex2a():
     print "welcome to rock paper scissors"
-    def askUserInput():
+    u1 = u2 = ""
+
+    while u2 == "":
         userInput = raw_input("choose rock(r), paper(p), scissors(s)").lower()
         if not(userInput == "r" or userInput == "p" or userInput == "s"):
             print "no valid input, try again!"
-            return askUserInput()
-        return userInput
-    u1 = askUserInput()
-    u2 = askUserInput()
+            continue
+        else:
+            if u1 == "":
+                u1 = userInput
+            else:
+                u2 = userInput
 
     winner = ""
     if u1 == u2:
@@ -56,14 +60,19 @@ def ex2a():
 
 def ex2b():
     print "welcome to rock paper scissors lizard spock"
-    def askUserInput():
+
+    u1 = u2 = ""
+
+    while u2 == "":
         userInput = raw_input("choose rock(r), paper(p), scissors(s), lizard(l), spock(sp)").lower()
         if not(userInput == "r" or userInput == "p" or userInput == "s" or userInput == "l" or userInput == "sp"):
             print "no valid input, try again!"
-            return askUserInput()
-        return userInput
-    u1 = askUserInput()
-    u2 = askUserInput()
+            continue
+        else:
+            if u1 == "":
+                u1 = userInput
+            else:
+                u2 = userInput
 
     winner = ""
     if u1 == u2:
