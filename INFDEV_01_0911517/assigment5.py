@@ -1,4 +1,4 @@
-# https://github.com/hogeschool/INFDEV01-1/blob/master/assignments/DEV%20I%20Assignment%20V.pdf
+﻿# https://github.com/hogeschool/INFDEV01-1/blob/master/assignments/DEV%20I%20Assignment%20V.pdf
 def ex1():
     input = raw_input("put in something to reverse:\t")
     output = ""
@@ -39,8 +39,13 @@ def ex3():
     nString = ""
 
     for char in sInput:
-        offset = 97 if str.islower(char) else 65
-        num = (ord(char) - offset + iInput + 26) % 26
-        nString += chr(num+offset)
+        if str.isalpha(char):
+            offset = 97 if str.islower(char) else 65
+            num = (ord(char) - offset + iInput + 26) % 26
+            nString += chr(num+offset)
+        else:
+            nString += char
 
-    print rtw
+    print nString
+
+ex3()
