@@ -1,4 +1,4 @@
-
+﻿
 def printSquare(height, width, full = False):
     figure = ""
     for i in range(0,height*width):        
@@ -48,7 +48,7 @@ def printCircle(r):
             if math.sqrt((x-r)**2 + (y-r)**2) < r:
                 circle += "*"
             else:
-                circle += "-"
+                circle += " "
         circle += "\n"
 
     print circle
@@ -80,7 +80,7 @@ def printSmiley(r):
 
     print circle
 
-printCircle(15)
+printCircle(25)
 
 printSmiley(15)
 printSmiley(10)
