@@ -26,9 +26,9 @@ printRectangleTriangle(5)
 
 def printIsoscelesTriangle(size):
     traingle = ""
-    for i in range(size):
-        for j in range(size*2-1):
-            if size-2-i < j and (size-2-i)+((i+1)*2) > j:
+    for i in range(1, size+1):
+        for j in range(1, size*2):
+            if size-i < j and (size+i) > j:
                 traingle += "*"
             else:
                 traingle += " "
@@ -36,7 +36,7 @@ def printIsoscelesTriangle(size):
         traingle += "\n"
     print traingle
 
-printIsoscelesTriangle(3)
+printIsoscelesTriangle(5)
 
 
 import math
