@@ -40,7 +40,9 @@ def ex3():
 
     for char in sInput:
         if str.isalpha(char):
+            # lower start at 97 and upper start at 65
             offset = 97 if str.islower(char) else 65
+            #there are 26 chars in the alphabet
             num = (ord(char) - offset + iInput + 26) % 26
             nString += chr(num+offset)
         else:
